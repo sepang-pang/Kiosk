@@ -8,7 +8,7 @@ public class Main {
         boolean answer = emp.employee();
 
         //첫 번째메뉴 출력
-        Kiosk_Re kiosk_re = new Kiosk_Re();
+        Kiosk kiosk_re = new Kiosk();
         int orderNum = kiosk_re.fistDisplayMenu(answer);
 
         // 햄버거 상세 정보

@@ -1,6 +1,6 @@
 package Kiosk_v0_2;
 
-public class DetailMenu extends Kiosk_Re {
+public class DetailMenu extends Kiosk {
 
     public void secondDisplayMenu(int orderNum) {
         switch (orderNum) {

@@ -4,12 +4,12 @@ public class Main {
     public static void main(String[] args) {
 
         // 종업원 인사
-        Employee emp = new Employee();
-        boolean answer = emp.employee();
+        Employee employee = new Employee();
+        boolean isAnswer = employee.employee();
 
         //첫 번째메뉴 출력
         Kiosk kiosk_re = new Kiosk();
-        int orderNum = kiosk_re.fistDisplayMenu(answer);
+        int orderNum = kiosk_re.fistDisplayMenu(isAnswer);
 
         // 햄버거 상세 정보
         DetailMenu detailMenu = new DetailMenu();

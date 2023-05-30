@@ -2,7 +2,6 @@ package Kiosk_v0_2.bugerAbstract;
 
 public class ShackBurger extends AbstractBurgers {
     public double shackBurgerPrice = 6.9;
-    public double SmokeShackPrice = 8.9;
 
     @Override
     public void choiceOption(int num) {

@@ -10,9 +10,10 @@ public class DetailMenu extends Kiosk {
                 for (String key : getBurgersMenu().keySet()) {
                     System.out.println(key + getBurgersMenu().get(key));
                 }
-                AddOption addOption = new AddOption();
-                addOption.addBugersOption(scanner.nextInt());
+                AddOption addOptionBurgers = new AddOption();
+                addOptionBurgers.addBugersOption(scanner.nextInt());
                 break;
+
             case 2:
                 System.out.println("[ FROZEN CUSTARD MENU ]");
                 for (String key : getIceCreamMenu().keySet()) {
@@ -21,13 +22,14 @@ public class DetailMenu extends Kiosk {
                 AddOption addOptionFrozen = new AddOption();
                 addOptionFrozen.addFrozenOption(scanner.nextInt());
                 break;
+
             case 3:
                 System.out.println("[ DRINKS MENU ]");
                 for (String key : getDrinkMenu().keySet()) {
                     System.out.println(key + getDrinkMenu().get(key));
                 }
-//                AddOption addOption = new AddOption();
-//                addOption.addOption(scanner.nextInt());
+                AddOption addOptionDrink = new AddOption();
+                addOptionDrink.addDrinkOption(scanner.nextInt());
                 break;
 
         }

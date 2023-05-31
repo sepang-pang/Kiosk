@@ -39,7 +39,7 @@ public class Kiosk {
         // 음료 목록
         drinkMenu.put("1. Shake-made Lemonade ", " | W 3.9 (R)  W 4.5 (L) | 오리지날, 시즈널");
         drinkMenu.put("2. Fresh Brewed Iced Tea ", " | W 3.4 (R)  W 3.9 (L) | 직접 유기농 홍차를 우려낸 아이스티");
-        drinkMenu.put("3. Fifty / Fifty ", " | W 3.5 (R)  W 4.4 (L) | 레몬에이드와 아이스티의 만남");
+        drinkMenu.put("3. Fifty / Fifty ", " | W 3.5 (R)  W 4.4 (L) | 레모네이드와 아이스티의 만남");
 
     }
 

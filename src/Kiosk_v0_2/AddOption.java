@@ -4,6 +4,10 @@ import Kiosk_v0_2.bugerAbstract.AbstractBurgers;
 import Kiosk_v0_2.bugerAbstract.ShackBurger;
 import Kiosk_v0_2.bugerAbstract.ShroomBurger;
 import Kiosk_v0_2.bugerAbstract.SmokeBurger;
+import Kiosk_v0_2.drinkAbstract.AbstractDrink;
+import Kiosk_v0_2.drinkAbstract.Fifty;
+import Kiosk_v0_2.drinkAbstract.IcedTea;
+import Kiosk_v0_2.drinkAbstract.Lemonade;
 import Kiosk_v0_2.frozenAbstract.AbstractFrozen;
 import Kiosk_v0_2.frozenAbstract.Concreates;
 import Kiosk_v0_2.frozenAbstract.CupsCones;
@@ -43,19 +47,21 @@ public class AddOption {
                 break;
         }
     }
-//    public void addDrinkOption(int choiceNum) {
-//        switch (choiceNum) {
-//            case 1:
-//                AbstractFrozen abstractFrozen = new CupsCones();
-//                abstractFrozen.choiceOption(choiceNum);
-//                break;
-//            case 2:
-//                abstractDrinks = new SmokeBurger();
-//                abstractDrinks.choiceOption(choiceNum);
-//                break;
-//            case 3:
-//                abstractDrinks = new ShroomBurger();
-//                abstractDrinks.choiceOption(choiceNum);
-//                break;
-        }
 
+    public void addDrinkOption(int choiceNum) {
+        switch (choiceNum) {
+            case 1:
+                AbstractDrink abstractDrinks = new Lemonade();
+                abstractDrinks.choiceOption(choiceNum);
+                break;
+            case 2:
+                abstractDrinks = new IcedTea();
+                abstractDrinks.choiceOption(choiceNum);
+                break;
+            case 3:
+                abstractDrinks = new Fifty();
+                abstractDrinks.choiceOption(choiceNum);
+                break;
+        }
+    }
+}

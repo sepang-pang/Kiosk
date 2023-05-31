@@ -6,15 +6,10 @@ public class Shake extends AbstractFrozen {
 
     @Override
     public void choiceOption(int num) {
-        boolean run = true;
-        while (run) {
-            System.out.println("=========================");
-            System.out.println("|" + " 1. 사이즈 업" + "  :   +1000원" + " |");
-            System.out.println("|" + " 2. 맛     " + "  : 바닐라, 초콜릿, 스트로베리, 커피, 카라멜" + " |");
-            System.out.println("|" + " 3. 종    료" + "            |");
-            System.out.println("=========================");
+        displayMenu();
+        boolean isRun = true;
+        while (isRun) {
             switch (sc.nextInt()) {
-
                 case 1:
                     shakePrice = shakePrice + getLargeCupsCones();
                     System.out.println("L 사이즈로 변경");
@@ -47,14 +42,22 @@ public class Shake extends AbstractFrozen {
                             System.out.println("잘못된 입력입니다.");
                             continue;
                     }
+                    displayMenu();
                     continue;
 
                 case 3:
                     System.out.println("종료");
-                    run = false;
+                    isRun = false;
             }
         }
         System.out.println("쉐이크 가격은 " + shakePrice + " ( " + tasteShake + " )");
+    }
+    public void displayMenu() {
+        System.out.println("=========================");
+        System.out.println("|" + " 1. 사이즈 업" + "  :   +1000원" + " |");
+        System.out.println("|" + " 2. 맛     " + "  : 바닐라, 초콜릿, 스트로베리, 커피, 카라멜" + " |");
+        System.out.println("|" + " 3. 종    료" + "            |");
+        System.out.println("=========================");
     }
 }
 

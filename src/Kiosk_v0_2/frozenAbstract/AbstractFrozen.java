@@ -37,7 +37,7 @@ public abstract class AbstractFrozen {
 
 
     // ======================= 추상메서드 =======================
-    public abstract void choiceOption(int num);
+    public abstract void choiceOption();
 
 }
 

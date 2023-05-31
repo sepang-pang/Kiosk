@@ -5,7 +5,7 @@ public class Fifty extends AbstractDrink {
     public double fiftyPrice = 3.4;
 
     @Override
-    public void choiceOption(int num) {
+    public void choiceOption() {
         boolean run = true;
         System.out.println("=========================");
         System.out.println("|" + " 1. 사이즈 업" + "  :   + 500원" + " |");

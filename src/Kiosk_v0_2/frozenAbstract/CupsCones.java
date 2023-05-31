@@ -6,7 +6,7 @@ public class CupsCones extends AbstractFrozen {
     public String tasteCupsCones; // 컵 앤 콘 맛
 
     @Override
-    public void choiceOption(int num) {
+    public void choiceOption() {
         displayMenu(); // 메뉴판
         boolean isRun = true;
         while (isRun) {

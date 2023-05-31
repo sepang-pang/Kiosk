@@ -13,54 +13,59 @@ import Kiosk_v0_2.frozenAbstract.Concreates;
 import Kiosk_v0_2.frozenAbstract.CupsCones;
 import Kiosk_v0_2.frozenAbstract.Shake;
 
+import java.util.Scanner;
+
 public class AddOption {
-    public void addBugersOption(int choiceNum) {
-        switch (choiceNum) {
+    Scanner scanner = new Scanner(System.in);
+    public void addBugersOption() {
+
+        switch (scanner.nextInt()) {
             case 1:
                 AbstractBurgers abstractBurgers = new ShackBurger();
-                abstractBurgers.choiceOption(choiceNum);
+                abstractBurgers.choiceOption();
                 break;
             case 2:
                 abstractBurgers = new SmokeBurger();
-                abstractBurgers.choiceOption(choiceNum);
+                abstractBurgers.choiceOption();
                 break;
             case 3:
                 abstractBurgers = new ShroomBurger();
-                abstractBurgers.choiceOption(choiceNum);
+                abstractBurgers.choiceOption();
                 break;
+
         }
     }
 
-    public void addFrozenOption(int choiceNum) {
-        switch (choiceNum) {
+    public void addFrozenOption() {
+        switch (scanner.nextInt()) {
             case 1:
                 AbstractFrozen abstractFrozen = new Shake();
-                abstractFrozen.choiceOption(choiceNum);
+                abstractFrozen.choiceOption();
                 break;
             case 2:
                 abstractFrozen = new CupsCones();
-                abstractFrozen.choiceOption(choiceNum);
+                abstractFrozen.choiceOption();
                 break;
             case 3:
                 abstractFrozen = new Concreates();
-                abstractFrozen.choiceOption(choiceNum);
+                abstractFrozen.choiceOption();
                 break;
         }
     }
 
-    public void addDrinkOption(int choiceNum) {
-        switch (choiceNum) {
+    public void addDrinkOption() {
+        switch (scanner.nextInt()) {
             case 1:
                 AbstractDrink abstractDrinks = new Lemonade();
-                abstractDrinks.choiceOption(choiceNum);
+                abstractDrinks.choiceOption();
                 break;
             case 2:
                 abstractDrinks = new IcedTea();
-                abstractDrinks.choiceOption(choiceNum);
+                abstractDrinks.choiceOption();
                 break;
             case 3:
                 abstractDrinks = new Fifty();
-                abstractDrinks.choiceOption(choiceNum);
+                abstractDrinks.choiceOption();
                 break;
         }
     }

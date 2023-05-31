@@ -50,6 +50,6 @@ public abstract class AbstractDrink {
     Scanner sc = new Scanner(System.in);
 
     // ======================= 추상메서드 =======================
-    public abstract void choiceOption(int num);
+    public abstract void choiceOption();
 
 }

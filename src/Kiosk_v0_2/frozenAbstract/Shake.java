@@ -5,7 +5,7 @@ public class Shake extends AbstractFrozen {
     public String tasteShake; // 컵 앤 콘 맛
 
     @Override
-    public void choiceOption(int num) {
+    public void choiceOption() {
         displayMenu();
         boolean isRun = true;
         while (isRun) {

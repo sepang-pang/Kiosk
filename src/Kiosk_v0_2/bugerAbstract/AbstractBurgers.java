@@ -24,6 +24,6 @@ public abstract class AbstractBurgers {
 
     Scanner sc = new Scanner(System.in);
 
-    public abstract void choiceOption (int num);
+    public abstract void choiceOption ();
 
 }

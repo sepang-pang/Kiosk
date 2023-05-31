@@ -4,7 +4,7 @@ public class ShackBurger extends AbstractBurgers {
     public double shackBurgerPrice = 6.9;
 
     @Override
-    public void choiceOption(int num) {
+    public void choiceOption() {
 
         boolean run = true;
         while (run) {

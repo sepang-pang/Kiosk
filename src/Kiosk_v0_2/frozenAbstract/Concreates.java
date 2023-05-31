@@ -6,7 +6,7 @@ public class Concreates extends AbstractFrozen {
     public String formConcreates; // 콘크리트 형태
 
     @Override
-    public void choiceOption(int num) {
+    public void choiceOption() {
         displayMenuText();
         boolean isRun = true;
         while (isRun) {

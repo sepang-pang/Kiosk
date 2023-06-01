@@ -5,20 +5,99 @@ import java.util.Objects;
 
 public class Product extends Menu {
     // ============ 햄버거 가격 ============ //
-    private String priceShackeBurger = "W 6.9";
     private double priceShackeBurgerDouble = 6.9;
     private double priceSmokeShack = 8.9;
-    private double priceshroomBurger = 9.4;
+    private double priceShroomBurger = 9.4;
+
+    public double getPriceShackeBurgerDouble() {
+        return priceShackeBurgerDouble;
+    }
+
+    public double getPriceSmokeShack() {
+        return priceSmokeShack;
+    }
+
+    public double getPriceShroomBurger() {
+        return priceShroomBurger;
+    }
 
     // ============ 아이스크림 가격 ============ //
     private double priceShake = 5.9;
     private double priceCupsCones = 4.9;
     private double priceConcretes = 5.9;
 
+    public double getPriceShake() {
+        return priceShake;
+    }
+
+    public double getPriceCupsCones() {
+        return priceCupsCones;
+    }
+
+    public double getPriceConcretes() {
+        return priceConcretes;
+    }
+
     // ============ 음료수 가격 ============ //
     private double priceLemonade = 3.9;
     private double priceIcedTea = 3.4;
     private double priceFifty = 3.5;
+
+    public double getPriceLemonade() {
+        return priceLemonade;
+    }
+
+    public double getPriceIcedTea() {
+        return priceIcedTea;
+    }
+
+    public double getPriceFifty() {
+        return priceFifty;
+    }
+
+    // ============ 추가 옵셕 ============ //
+    // ============ 햄버거 추가 옵션============ //
+    private double beefPrice = 1.0;
+    private double cheesePrice = 0.5;
+
+    public double getBeefPrice() {
+        return beefPrice;
+    }
+
+    public double getCheesePrice() {
+        return cheesePrice;
+    }
+
+    // ============ 아이스크림 추가 옵션============ //
+    private double largeCupsCones = 1.0;
+    private double largeConcretes = 3.0;
+    public double getLargeCupsCones() {
+        return largeCupsCones;
+    }
+    public double getLargeConcretes() {
+        return largeConcretes;
+    }
+
+    // ============ 음료수 추가 옵션============ //
+    private double lemonadeLarge = 0.4;
+    private double icedTea = 0.5;
+    private double fiftyLarge = 0.9;
+    private double addIce = 0.5;
+
+    public double getLemonadeLarge() {
+        return lemonadeLarge;
+    }
+
+    public double getIcedTeaLarge() {
+        return icedTea;
+    }
+
+    public double getFiftyLarge() {
+        return fiftyLarge;
+    }
+    public double getAddIce() {
+        return addIce;
+    }
 
     // ============ 초기 메뉴 리스트로 저장 ============ //
     public ArrayList<ArrayList<String>> displayMenu() {
@@ -80,7 +159,7 @@ public class Product extends Menu {
 
         ArrayList<Object> shroomBurger = new ArrayList<>();
         shroomBurger.add(getShroomBurger());
-        shroomBurger.add(priceshroomBurger);
+        shroomBurger.add(priceShroomBurger);
         shroomBurger.add(getInfoshroomBurger());
         productBurgers.add(shroomBurger);
         return productBurgers;
@@ -109,6 +188,7 @@ public class Product extends Menu {
         productFrozen.add(concretes);
         return productFrozen;
     }
+
     // ============ 음료수 메뉴 리스트로 저장 ============ //
     public ArrayList<ArrayList<Object>> displayDrinks() {
         ArrayList<ArrayList<Object>> productDrinks = new ArrayList<>();

@@ -1,23 +1,31 @@
 package Kiosk_v0_2.drinkAbstract;
 
+import Kiosk_v0_2.Product;
+
 import java.util.Scanner;
 
 public abstract class AbstractDrink {
+    Product product = new Product();
+
+
+    double lemonadePrice = product.getPriceLemonade();
+    double icedTeaPrice = product.getPriceIcedTea();
+    double fiftyPrice = product.getPriceFifty();
+
+
     // ======================== 필드 ========================
     // 레몬네이드
-    private double lemonade = 3.9;
-    private double lemonadeLarge = 0.6;
+
+    double lemonadeLarge = product.getLemonadeLarge();
 
     // 아이스티
-    private double icedTea = 3.4;
-    private double icedTeaLarge = 0.5;
+    double icedTeaLarge = product.getIcedTeaLarge();
 
     // 피프티
-    private double fifty = 3.5;
-    private double fiftyLarge = 0.9;
+    double fiftyLarge = product.getFiftyLarge();
 
     // 공용
-    private double addIce = 0.5;
+    double addIce = product.getAddIce();
 
     // ======================== GET ========================
     // get 레몬네이드

@@ -1,7 +1,7 @@
 package Kiosk_v0_2.bugerAbstract;
 
 public class SmokeBurger extends AbstractBurgers {
-    public double SmokeShackPrice = 8.9;
+
 
     @Override
     public void choiceOption() {
@@ -10,12 +10,12 @@ public class SmokeBurger extends AbstractBurgers {
         while (run) {
             switch (sc.nextInt()) {
                 case 1:
-                    SmokeShackPrice = SmokeShackPrice + getBeefPrice();
+                    smokeShackPrice = smokeShackPrice + beefPrice;
                     System.out.println("패티를 추가하였습니다.");
                     continue;
 
                 case 2:
-                    SmokeShackPrice = SmokeShackPrice + getCheesePrice();
+                    smokeShackPrice = smokeShackPrice + cheesePrice;
                     System.out.println("치즈를 추가하였습니다.");
                     continue;
 
@@ -24,6 +24,6 @@ public class SmokeBurger extends AbstractBurgers {
                     run = false;
             }
         }
-        System.out.println("스모크버거 가격은 " + SmokeShackPrice);
+        System.out.println("스모크버거 가격은 " + smokeShackPrice);
     }
 }

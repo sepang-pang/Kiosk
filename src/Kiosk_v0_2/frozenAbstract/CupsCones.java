@@ -2,7 +2,6 @@ package Kiosk_v0_2.frozenAbstract;
 
 public class CupsCones extends AbstractFrozen {
 
-    public double cupsConesPrice = 4.9;
     public String tasteCupsCones; // 컵 앤 콘 맛
 
     @Override
@@ -12,7 +11,7 @@ public class CupsCones extends AbstractFrozen {
         while (isRun) {
             switch (sc.nextInt()) {
                 case 1:
-                    cupsConesPrice = cupsConesPrice + getLargeCupsCones();
+                    cupsConesPrice = cupsConesPrice + largeCupsCones;
                     System.out.println("L 사이즈로 변경");
                     continue;
 

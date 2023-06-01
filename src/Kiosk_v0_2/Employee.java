@@ -29,7 +29,7 @@ public class Employee {
                     break;
                 default:
                     System.out.println(maggage.choiceErrorMessage);
-                    continue; // while 것임. 디폴트값이 입력 됐을 때 continue가 실행되고, 다음 과정을 스킵함 (여기서는 break)
+                    continue; // while 것임. 디폴트값이 입력 됐을 때 continue가 실행되고, 다음 과정을 스킵함 (여기서는 break를 스킵하기에 whhile 재실행)
             }
             break;
         }

@@ -2,7 +2,6 @@ package Kiosk_v0_2.frozenAbstract;
 
 public class Concreates extends AbstractFrozen {
 
-    public double concreatesPrice = 5.9; // 콘크리트 가격
     public String formConcreates; // 콘크리트 형태
 
     @Override
@@ -12,7 +11,7 @@ public class Concreates extends AbstractFrozen {
         while (isRun) {
             switch (sc.nextInt()) {
                 case 1:
-                    concreatesPrice = concreatesPrice + getLargeConcretes();
+                    concreatesPrice = concreatesPrice + largeConcretes;
                     System.out.println("L 사이즈로 변경");
                     continue;
 

@@ -9,12 +9,9 @@ public class Kiosk {
     Screen screen = new Screen(); // 스크린 객체
     Menu message = new Menu();
     AddOption addOption = new AddOption();
-    boolean isTrue = employee.employee(); // 논리형 타입 대입
     Scanner scanner = new Scanner(System.in);
+    boolean isTrue = employee.employee(); // 논리형 타입 대입
 
-
-    public Kiosk() {
-    }
 
     public void kioskRun() {
         if (isTrue) {

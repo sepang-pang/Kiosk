@@ -2,8 +2,6 @@ package Kiosk_v0_2.drinkAbstract;
 
 public class IcedTea extends AbstractDrink {
 
-    public double icedTeaPrice = 3.4;
-
     @Override
     public void choiceOption() {
         boolean run = true;

@@ -2,7 +2,6 @@ package Kiosk_v0_2.drinkAbstract;
 
 public class Fifty extends AbstractDrink {
 
-    public double fiftyPrice = 3.4;
 
     @Override
     public void choiceOption() {

@@ -1,7 +1,6 @@
 package Kiosk_v0_2.frozenAbstract;
 
 public class Shake extends AbstractFrozen {
-    public double shakePrice = 4.9;
     public String tasteShake; // 컵 앤 콘 맛
 
     @Override
@@ -11,7 +10,7 @@ public class Shake extends AbstractFrozen {
         while (isRun) {
             switch (sc.nextInt()) {
                 case 1:
-                    shakePrice = shakePrice + getLargeCupsCones();
+                    shakePrice = shakePrice + largeCupsCones;
                     System.out.println("L 사이즈로 변경");
                     continue;
 

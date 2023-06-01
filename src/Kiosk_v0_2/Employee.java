@@ -16,7 +16,7 @@ public class Employee {
 
 
     // 메서드
-    public boolean employee() { // 클래스 자체 보이드로 설정하고
+    public boolean employee() {
         // 주문 boolean
         Scanner scanner = new Scanner(System.in);
         boolean isAnswer = true;
@@ -29,7 +29,7 @@ public class Employee {
                     break;
                 default:
                     System.out.println(maggage.choiceErrorMessage);
-                    continue;
+                    continue; // while 것임. 디폴트값이 입력 됐을 때 continue가 실행되고, 다음 과정을 스킵함 (여기서는 break)
             }
             break;
         }

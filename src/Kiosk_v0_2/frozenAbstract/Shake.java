@@ -1,16 +1,23 @@
 package Kiosk_v0_2.frozenAbstract;
 
+import Kiosk_v0_2.Cart;
+
 public class Shake extends AbstractFrozen {
-    public String tasteShake; // 컵 앤 콘 맛
+    private Cart cart; // Cart 클래스 참조
+    public String tasteShake; // 쉐이크 맛
+
+    public Shake(Cart cart) {
+        this.cart = cart;
+    }
 
     @Override
     public void choiceOption() {
-        displayMenu();
-        boolean isRun = true;
-        while (isRun) {
+        displayMenuText();
+        while (true) {
             switch (sc.nextInt()) {
                 case 1:
-                    shakePrice = shakePrice + largeCupsCones;
+                    shakePrice += largeCupsCones;
+                    size = "(L)";
                     System.out.println("L 사이즈로 변경");
                     continue;
 
@@ -41,17 +48,25 @@ public class Shake extends AbstractFrozen {
                             System.out.println("잘못된 입력입니다.");
                             continue;
                     }
-                    displayMenu();
+                    displayMenuText();
                     continue;
 
                 case 3:
                     System.out.println("종료");
-                    isRun = false;
+                    cart.addToCart("Shake", shakePrice, tasteShake, size);
+                    cart.printCart();
+                    break;
+
+                default:
+                    System.out.println("잘못된 입력입니다.");
+                    displayMenuText();
+                    continue;
+
             }
+            break;
         }
-        System.out.println("쉐이크 가격은 " + shakePrice + " ( " + tasteShake + " )");
     }
-    public void displayMenu() {
+    public void displayMenuText() {
         System.out.println("=========================");
         System.out.println("|" + " 1. 사이즈 업" + "  :   +1000원" + " |");
         System.out.println("|" + " 2. 맛     " + "  : 바닐라, 초콜릿, 스트로베리, 커피, 카라멜" + " |");

@@ -1,5 +1,7 @@
 package Kiosk_v0_2.bugerAbstract;
 
+import Kiosk_v0_2.Cart;
+import Kiosk_v0_2.Kiosk;
 import Kiosk_v0_2.Product;
 
 import java.util.Scanner;
@@ -7,6 +9,8 @@ import java.util.Scanner;
 public abstract class AbstractBurgers {
 
     Product product = new Product();
+    Kiosk kiosk = new Kiosk();
+    Cart cart = new Cart();
     Double beefPrice = product.getBeefPrice();
     Double cheesePrice = product.getCheesePrice();
     Double shackBurgerPrice = product.getPriceShackeBurgerDouble();

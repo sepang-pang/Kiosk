@@ -71,8 +71,8 @@ public class Menu {
     }
 
     // ==================== 햄버거 제품 목록 ==================== //
-    private String shackBurger = "ShackBurger";
-    private String smokeShack = "SmokeShack";
+    private String shackBurger = "Shack Burger";
+    private String smokeShack = "Smoke Shack";
     private String shroomBurger = " Shroom Burger";
 
     public String getShackBurger() {

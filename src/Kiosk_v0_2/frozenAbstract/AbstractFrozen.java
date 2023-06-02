@@ -19,6 +19,8 @@ public abstract class AbstractFrozen {
     double concreatesPrice = product.getPriceConcretes(); // 콘크리트 가격
     double largeConcretes = product.getLargeConcretes(); // 콘크리트 라지사이즈 가격
 
+    String size = "(R)";
+
     // ======================== 생성자 ========================
     public AbstractFrozen() {
         System.out.println("=========================");

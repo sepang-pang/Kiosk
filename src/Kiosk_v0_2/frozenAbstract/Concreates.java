@@ -1,17 +1,25 @@
 package Kiosk_v0_2.frozenAbstract;
 
+import Kiosk_v0_2.Cart;
+
 public class Concreates extends AbstractFrozen {
 
+    private Cart cart; // Cart 클래스 참조
     public String formConcreates; // 콘크리트 형태
+
+
+    public Concreates(Cart cart) {
+        this.cart = cart;
+    }
 
     @Override
     public void choiceOption() {
         displayMenuText();
-        boolean isRun = true;
-        while (isRun) {
+        while (true) {
             switch (sc.nextInt()) {
                 case 1:
-                    concreatesPrice = concreatesPrice + largeConcretes;
+                    concreatesPrice += largeConcretes;
+                    size = "(L)";
                     System.out.println("L 사이즈로 변경");
                     continue;
 
@@ -39,10 +47,18 @@ public class Concreates extends AbstractFrozen {
 
                 case 3:
                     System.out.println("종료");
-                    isRun = false;
+                    cart.addToCart("Concreates", concreatesPrice, formConcreates, size);
+                    cart.printCart();
+                    break;
+
+                default:
+                    System.out.println("잘못된 입력입니다.");
+                    displayMenuText();
+                    continue;
             }
+            break;
         }
-        System.out.println("콘크리트 가격은 " + concreatesPrice + " ( " + formConcreates + " )");
+
     }
 
     public void displayMenuText() {

@@ -5,17 +5,20 @@ import java.util.Scanner;
 
 public class Kiosk {
 
-    Employee employee = new Employee(); // 직원 객체
+
+
     Screen screen = new Screen(); // 스크린 객체
     Menu message = new Menu();
     AddOption addOption = new AddOption();
     Scanner scanner = new Scanner(System.in);
-    boolean isTrue = employee.employee(); // 논리형 타입 대입
+    Cart cart = new Cart();
 
 
     public void kioskRun() {
-        if (isTrue) {
-            screen.initialScreen();
+        System.out.println("========== 쉑쉑버거 ==========");
+        System.out.println("안녕하세요!! 쉑쉑버거입니다!!");
+        System.out.println("종업원: 주문하시겠습니까? (Y/N)");
+        if (scanner.nextLine().equals("Y")) {
             choiceShakeShake();
         } else {
             System.out.println("주문을 취소하시겠습니까? ( Y / N )");
@@ -26,7 +29,7 @@ public class Kiosk {
                         System.out.println("안녕 가십시오.");
                         break;
                     case "N":
-                        screen.initialScreen();
+                        kioskRun();
                     default:
                         System.out.println(message.choiceErrorMessage);
                         continue;
@@ -37,6 +40,7 @@ public class Kiosk {
     } // < ==== kioskRun 종료 ==== >
 
     public void choiceShakeShake() {
+        screen.initialScreen();
         while (true) {
             switch (scanner.nextInt()) {
                 case 1:
@@ -50,6 +54,10 @@ public class Kiosk {
                 case 3:
                     screen.drinksScreen();
                     addOption.addDrinkOption();
+                    break;
+                case 4:
+                    cart.printCart();
+                    cart.printTotalPrice();
                     break;
                 default:
                     System.out.println(message.errorInputMassage);

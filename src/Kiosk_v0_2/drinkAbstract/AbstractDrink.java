@@ -1,6 +1,7 @@
 package Kiosk_v0_2.drinkAbstract;
 
 import Kiosk_v0_2.Product;
+import Kiosk_v0_2.Kiosk;
 
 import java.util.Scanner;
 
@@ -27,33 +28,19 @@ public abstract class AbstractDrink {
     // 공용
     double addIce = product.getAddIce();
 
-    // ======================== GET ========================
-    // get 레몬네이드
-    public double getLemonadeLarge() {
-        return lemonadeLarge;
-    }
+    String size = "(R)";
 
-    // get 아이스티
-    public double getIcedTeaLarge() {
-        return icedTeaLarge;
-    }
-
-    // get 피프티
-    public double getFiftyLarge() {
-        return fiftyLarge;
-    }
-
-    // get 공용
-    public double getAddIce() {
-        return addIce;
-    }
 
     // ======================== 생성자 ========================
     public AbstractDrink() {
+
         System.out.println("=========================");
-        System.out.println("|" + "   음료수 선택   " + "|");
+        System.out.println("|" + "     DRINK  OPTION     " + "|");
         System.out.println("=========================");
+
+
     }
+
 
     Scanner sc = new Scanner(System.in);
 

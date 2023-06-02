@@ -1,22 +1,27 @@
 package Kiosk_v0_2.frozenAbstract;
 
-public class CupsCones extends AbstractFrozen {
+import Kiosk_v0_2.Cart;
 
+public class CupsCones extends AbstractFrozen {
+    private Cart cart; // Cart 클래스 참조
     public String tasteCupsCones; // 컵 앤 콘 맛
+
+    public CupsCones(Cart cart) {
+        this.cart = cart;
+    }
 
     @Override
     public void choiceOption() {
-        displayMenu(); // 메뉴판
-        boolean isRun = true;
-        while (isRun) {
+        displayMenuText(); // 메뉴판
+        while (true) {
             switch (sc.nextInt()) {
                 case 1:
-                    cupsConesPrice = cupsConesPrice + largeCupsCones;
+                    cupsConesPrice += largeCupsCones;
+                    size = "(L)";
                     System.out.println("L 사이즈로 변경");
                     continue;
-
                 case 2:
-                    System.out.println("1. 바닐라        2. 초콜릿");
+                    System.out.println("1. 바닐라 2. 초콜릿");
                     switch (sc.nextInt()) {
                         case 1:
                             tasteCupsCones = "바닐라";
@@ -30,17 +35,25 @@ public class CupsCones extends AbstractFrozen {
                             System.out.println("잘못된 입력입니다.");
                             continue;
                     }
-                    displayMenu();
+                    displayMenuText();
                     continue;
 
                 case 3:
                     System.out.println("종료");
-                    isRun = false;
+                    cart.addToCart("Cups & Cones", cupsConesPrice, tasteCupsCones, size);
+                    cart.printCart();
+                    break;
+
+                default:
+                    System.out.println("잘못된 입력입니다.");
+                    displayMenuText();
+                    continue;
             }
+            break;
         }
-        System.out.println("컵 앤 콘 가격은 " + cupsConesPrice + " ( " + tasteCupsCones + " )");
+
     }
-    public void displayMenu() {
+    public void displayMenuText() {
         System.out.println("=========================");
         System.out.println("|" + " 1. 사이즈 업" + "  :   +1000원" + " |");
         System.out.println("|" + " 2. 맛     " + "  :   바닐라, 초콜릿" + " |");
